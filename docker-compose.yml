@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  app:
+    container_name: react-app-bootstrap-dev
+    image: react-app-bootstrap-dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    volumes:
+      - ./:/app
+    ports:
+      - 3000:3000
